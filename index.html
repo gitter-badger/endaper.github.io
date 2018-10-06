@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ACGMOE</title>
+<link rel="stylesheet" href="Pio/live2d.css" type="text/css">
+<link rel="stylesheet" href="css/grumble.min.css">
+<script src="js/jquery.grumble.min.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<style type="text/css">
+html,body,p,h1,h2,h3,h4,h5,h6,form,input,textarea,select,button,fieldset,legend,img,ul,ol,li,dl,dt,dd,th,td,pre,blockquote{margin:0;padding:0}
+a{text-decoration:none;color:#040404;blr:expression(this.onFocus=this.blur())}/
+html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+body{background-color:#fff;color:#040404;min-height:100%;height:auto!important;height:100%}
+body,button,input,select,textarea,h1,h2,h3,h4,h5,h6{font:14px "微软雅黑","Microsoft Yahei",arial,simhei}
+table{border-collapse:collapse;border-spacing:0}
+img,fieldset{border:0;vertical-align:middle}
+ul,li,ol{list-style:none}
+em,i{font-style:normal}
+iframe{display:block}
+
+
+.clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;}
+.cont{width:1200px;margin:0px auto;}
+.textcent{ text-align:center}
+
+.head {height: 70px;width: 100%; }
+.yanse{ background:#be4355; width:50%; position: absolute;  right:0px;z-index:-1px; float:right;height:70px }
+.head-left {float: left;height:55px;width:200px;margin-left: 47px;padding-top: 15px;}
+/*nav导航盒子*/
+.nav{width:730px;height:54px;line-height:54px;text-align:center;font-size:16px;position:relative;background:#be4355  url(images/nav_bg.jpg) no-repeat left bottom ;padding-top:16px;  padding-left:150px;float:right; font-weight:bold; font-family:"微软雅黑";z-index:1000}
+/*nav-main*/
+ul.nav-main{width:100%;height:100%;list-style-type:none}
+ul.nav-main span{display:inline-block;margin-left:18px;width:12px;height:9px; background:url(images/sj1.png) no-repeat center center}
+
+/*图标向上旋转*/
+.hover-up{transition-duration:.5s;transform:rotate(180deg);-webkit-transform:rotate(180deg); }
+/*图标向下旋转*/
+.hover-down{transition-duration:.5s;transform:rotate(0);-webkit-transform:rotate(0)}
+/*导航条设置*/
+ul.nav-main>li{width:133px;height:100%;display:block;float:left;color:#fff;margin-right:1px;cursor:pointer}
+ul.nav-main>li:hover{background:#fff ; color:#be4355 }
+ul.nav-main>li:hover span{ background:url(images/sg3.jpg)  no-repeat center center; z-index:100000 }
+/*隐藏盒子设置*/
+div.hidden-box{width:133px;position:absolute;display:none;background:#315565 url(images/sj2.png) no-repeat  top center;top:70px;filter:alpha(opacity=80); -moz-opacity:0.8; opacity:0.8;}
+.hidden-box>ul{list-style-type:none;color:#fff;cursor:pointer; padding-top:12px;padding-bottom:15px}
+.hidden-box>ul li{ line-height:30px; height:30px; font-weight:500}
+/*.hidden-box li:hover{background:#643519;color:#fff}*/
+
+/*隐藏盒子位置设置*/
+.hidden-loc-index{left:284px}
+.hidden-loc-us{left:417px}
+.hidden-loc-info{left:550px}
+.box04{left:683px}
+
+</style>
+<body>
+
+<!--头部开始 -->
+<div class="head ">
+	<div class="cont">
+		<div class="head-left"><a href="#"><img src="images/logo.png" alt="" width="200" height="55" /></a></div>
+		<div class="nav"> 
+			<!--导航条-->
+			<ul class="nav-main">
+				<li>网站首页</li>
+				<li id="li-1">关于网站<span></span></li>
+				<li id="li-2">信息资讯<span></span></li>
+				<li id="li-3">在线聊天<span></span></li>
+				<li id="li-4">联系我们<span></span></li>
+			</ul>
+			<!--隐藏盒子-->
+			<div id="box-1" class="hidden-box hidden-loc-index">
+				<ul>
+					<li>这个网站是为了</li>
+                    <li>创建一个良好的</li>
+                    <li>ACGN交流平台</li>
+					
+				</ul>
+			</div>
+			<div id="box-2" class="hidden-box hidden-loc-us">
+				<ul>
+                    <li>暂无信息</li>
+					</ul>
+			</div>
+			<div id="box-3" class="hidden-box hidden-loc-info">
+				<ul>
+                    <li>开始聊天</li>
+                    </ul>
+			</div>
+			<div id="box-4" class="hidden-box hidden-loc-info box04">
+				<ul>
+					<li>联系我们</li>
+					<li>加入我们</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="yanse"></div>
+</div>
+<!--头部结束 --> 
+
+<script type="text/javascript" src="js/main.js"></script> 
+
+
+<div class="waifu">
+  <a href="#" id="ex1">
+  <o1 id="demo1">
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+  </o1></a>
+</div>
+
+<script src="Pio/live2d.js" type="text/javascript"></script>
+<script type="text/javascript">
+loadlive2d("live2d", "Pio/model.json");
+</script>
+<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="js/jquery.grumble.min.js?v=7"></script><script>
+var isSequenceComplete = true;
+ $('#ex1').click(function (e) {
+
+            e.preventDefault();
+
+            if (isSequenceComplete === false) return true;
+            isSequenceComplete = false;
+ $('o1#demo1').grumble(
+			{   
+			    text: '欢迎浏览ACGN萌！',
+			
+			    angle: 70,
+			    distance: 100,
+			    showAfter: 500,
+				hideAfter: 1000,
+				 type: 'alt-',
+				 onHide: function () {
+				        isSequenceComplete = true;
+				    }
+				 
+			}); });
+			</script>
+</body>
+</html>
